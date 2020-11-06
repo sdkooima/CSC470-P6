@@ -16,12 +16,66 @@ namespace P5
         
         private static List<Issue> _Issues = new List<Issue>();
 
+        public FakeIssueRepository()
+        {
+            if(_Issues.Count == 0)
+            {
+                
+            }
+        }
+
+        public string Add(Issue issue)
+        {
+
+        }
+
+        public List<Issue> GetAll(int ProjectId)
+        {
+            return _Issues;
+        }
+
+        public bool Remove(Issue issue)
+        {
+
+        }
+
+        public string Modify(Issue issue)
+        {
+
+        }
+
+        public List<string> GetIssuesByMonth(int ProjectId)
+        {
+
+        }
+
+        public List<string> GetIssuesByDiscoverer(int ProjectId)
+        {
+
+        }
+
         private string ValidateIssue(Issue issue)
         {
             
         }
 
         private bool IsDuplicate(string title)
+        {
+
+        }
+
+        public int GetTotalNumberOfIssues(int ProjectId)
+        {
+            int count = 0;
+            foreach (Issue x in _Issues)
+            {
+                if (x.ProjectId == ProjectId)
+                    count++;
+            }
+            return count;
+        }
+
+        public Issue GetIssueById(int Id)
         {
 
         }
